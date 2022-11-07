@@ -14,12 +14,14 @@
     "@mantine/core": "^5.7.1",
     "@mantine/hooks": "^5.7.1",
     "@mantine/next": "^5.7.1",
+    "@tabler/icons": "^1.110.0",
     "cookies-next": "^2.1.1",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.2",
     "next": "13.0.2",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "^1.56.0"
   },
   "devDependencies": {
     "@types/node": "18.11.9",
