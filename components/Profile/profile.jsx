@@ -5,16 +5,14 @@ import {
   IconBrandMedium,
 } from "@tabler/icons";
 import Image from "next/image";
+import DashedHeading from "../../atoms/DashedHeading/DashedHeading";
 import styles from "./profile.module.scss";
 
 const Profile = () => {
   return (
     <div id={styles.profile}>
       <div className={styles.info}>
-        <span className={styles.header}>
-          <span className={styles.dash}>-</span>
-          <span className={styles.headText}>MY NAME IS</span>
-        </span>
+        <DashedHeading text="MY NAME IS" />
         <span className={styles.name}>
           <span className={styles.firstName}>Abhishek</span>
           <span className={styles.lastName}>Kedia.</span>

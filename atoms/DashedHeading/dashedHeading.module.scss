@@ -1,0 +1,16 @@
+#header {
+  display: flex;
+  align-items: center;
+
+  .dash {
+    background: #d9d9d9;
+  }
+
+  .headText {
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 8px;
+    color: #656d72;
+    padding-left: 1rem;
+  }
+}

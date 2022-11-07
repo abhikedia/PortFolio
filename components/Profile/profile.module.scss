@@ -9,10 +9,6 @@
     flex-direction: column;
     row-gap: 2.5rem;
 
-    .dash {
-      background: #d9d9d9;
-    }
-
     .name {
       font-weight: 700;
       font-size: 50px;
@@ -28,30 +24,13 @@
       color: #7e74f1;
     }
 
-    .header {
-      display: flex;
-      align-items: center;
-    }
-
-    .dash {
-      max-height: fit-content;
-    }
-
-    .headText {
-      font-weight: 500;
-      font-size: 18px;
-      letter-spacing: 8px;
-      color: #656d72;
-      padding-left: 1rem;
-    }
-
     .description {
       max-width: 30vw;
     }
 
     .icons {
-        display: flex;
-        column-gap: 1.5rem;
+      display: flex;
+      column-gap: 1.5rem;
     }
   }
 
