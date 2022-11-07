@@ -7,6 +7,7 @@ import {
   ColorScheme,
   ColorSchemeProvider,
 } from "@mantine/core";
+import '../styles/globals.css';
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;

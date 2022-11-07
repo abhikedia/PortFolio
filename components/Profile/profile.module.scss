@@ -1,0 +1,87 @@
+#profile {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5rem;
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+
+    .dash {
+      background: #d9d9d9;
+    }
+
+    .name {
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 55px;
+    }
+
+    .firstName {
+      color: #232e35;
+    }
+
+    .lastName {
+      padding-left: 1rem;
+      color: #7e74f1;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+    }
+
+    .dash {
+      max-height: fit-content;
+    }
+
+    .headText {
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: 8px;
+      color: #656d72;
+      padding-left: 1rem;
+    }
+
+    .description {
+      max-width: 30vw;
+    }
+
+    .icons {
+        display: flex;
+        column-gap: 1.5rem;
+    }
+  }
+
+  .image {
+    .front {
+      width: 336px;
+      height: 400px;
+      background: #eae6fe;
+      border-radius: 16px;
+    }
+
+    .back {
+      background: #7e74f1;
+      border-radius: 16px;
+      transform: rotate(-9.55deg);
+    }
+
+    .lines {
+      opacity: 0.7;
+      /* White */
+      height: 343.16632080078125px;
+      width: 398.25238037109375px;
+      left: 8px;
+      //   top: -134.415771484375px;
+      border-radius: 0px;
+      border: 2px dashed #ffffff;
+    }
+
+    .pic {
+      border-radius: 4px;
+    }
+  }
+}
