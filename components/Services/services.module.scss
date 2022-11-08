@@ -1,5 +1,26 @@
 #services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 7rem 0rem;
+  background-color: #FBFBFB;
+
+  .header {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 5rem 0rem;
+    row-gap: 1.2rem;
+  }
+
+  .font {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .cards {
+    display: flex;
+    padding-top: 4rem;
+    column-gap: 4rem;
+  }
 }
