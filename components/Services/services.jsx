@@ -6,9 +6,9 @@ import styles from "./services.module.scss";
 const Services = () => {
   return (
     <div id={styles.services}>
-      <div className={styles.header}>
+      <div className="header">
         <DashedHeading text="SERVICES" />
-        <span className={styles.font}>Specialized in</span>
+        <span className="header-text">Specialized in</span>
       </div>
       <div className={styles.cards}>
         <ServiceCard
