@@ -1,0 +1,20 @@
+#projects {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5rem 10rem;
+
+  .row1 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .projectList {
+    display: flex;
+  }
+
+  .card {
+    padding: 2rem 3rem;
+    border-radius: 15px;
+  }
+}
