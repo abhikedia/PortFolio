@@ -1,0 +1,17 @@
+#skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+
+  .techIcons {
+    display: grid;
+    gap: 5rem 12rem;
+    padding-top: 5rem;
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .padding {
+    margin-top: 1.5rem;
+  }
+}
