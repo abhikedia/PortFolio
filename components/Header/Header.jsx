@@ -1,6 +1,6 @@
 import ColorSchemeToggle from "../ColorSchemeToggle/colorSchemeToggle";
 import { Button } from "@mantine/core";
-import styles from "./header.module.scss";
+import styles from "./Header.module.scss";
 
 const Header = () => {
   return (

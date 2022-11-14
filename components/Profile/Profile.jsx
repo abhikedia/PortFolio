@@ -6,7 +6,7 @@ import {
 } from "@tabler/icons";
 import Image from "next/image";
 import DashedHeading from "../../atoms/DashedHeading/DashedHeading";
-import styles from "./profile.module.scss";
+import styles from "./Profile.module.scss";
 
 const Profile = () => {
   return (

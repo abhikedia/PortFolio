@@ -1,4 +1,4 @@
-import styles from "./dashedHeading.module.scss";
+import styles from "./DashedHeading.module.scss";
 
 const DashedHeading = ({ text }) => {
   return (

@@ -1,7 +1,7 @@
 import { IconDatabase } from "@tabler/icons";
 import DashedHeading from "../../atoms/DashedHeading/DashedHeading";
-import ServiceCard from "../../atoms/ServiceCard/serviceCard";
-import styles from "./services.module.scss";
+import ServiceCard from "../../atoms/ServiceCard/ServiceCard";
+import styles from "./Services.module.scss";
 
 const Services = () => {
   return (
