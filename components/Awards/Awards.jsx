@@ -39,8 +39,6 @@ export const Awards = () => {
         animationDuration={5000}
         autoWidth
         keyboardNavigation
-        paddingLeft="7rem"
-        paddingRight="7rem"
         responsive={breakpoint}
         disableSlideInfo={false}
       />

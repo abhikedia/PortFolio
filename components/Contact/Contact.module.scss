@@ -30,3 +30,19 @@
     background-color: #7e74f1;
   }
 }
+
+@media (max-width: 767px) {
+  #contact {
+    padding: 4rem 2rem;
+
+    .row1 {
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+
+    .header {
+      margin-top: 1.5rem;
+      font-size: 1.25rem;
+    }
+  }
+}
