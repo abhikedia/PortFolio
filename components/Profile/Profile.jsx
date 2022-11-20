@@ -34,8 +34,8 @@ const Profile = () => {
         quality={100}
         src="/images/me2.png"
         alt="Picture of the author"
-        width={650}
-        height={450}
+        width={500}
+        height={400}
       />
     </div>
   );

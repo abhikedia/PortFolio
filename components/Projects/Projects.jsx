@@ -12,7 +12,9 @@ const Card = ({ icon, name, description, github }) => {
         <span className={styles.projectName}>{name}</span>
       </div>
       <div>{description}</div>
-      <Link href={github}>Github</Link>
+      <Link href={github} className={styles.link}>
+        Github
+      </Link>
     </div>
   );
 };

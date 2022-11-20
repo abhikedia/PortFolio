@@ -1,7 +1,7 @@
 #profile {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  column-gap: 20vw;
+  justify-content: center;
   padding: 5rem 0;
 
   .info {

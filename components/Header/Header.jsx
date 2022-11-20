@@ -13,7 +13,7 @@ const Header = () => {
         <span>Blog</span>
       </div>
       <div className={`${styles.cta} ${styles.options}`}>
-        <ColorSchemeToggle />
+        {/* <ColorSchemeToggle /> */}
         <Button variant="default">Resume</Button>
       </div>
     </div>

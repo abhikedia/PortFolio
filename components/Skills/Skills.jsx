@@ -18,7 +18,7 @@ const Skills = () => {
         />
         <Image
           src="/icons/nextjs.png"
-          width={120}
+          width={150}
           height={80}
           alt="tech-icon"
           className={styles.padding}
