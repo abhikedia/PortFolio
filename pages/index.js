@@ -1,3 +1,4 @@
+import Awards from '../components/Awards/Awards';
 import Header from '../components/Header/Header';
 import Profile from '../components/Profile/Profile';
 import Projects from '../components/Projects/Projects';
@@ -14,6 +15,7 @@ export default function Home() {
         <Services />
         <Projects />
         <WorkExperience />
+        <Awards />
         <Skills />
       </main>
       <footer></footer>

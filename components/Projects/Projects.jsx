@@ -3,6 +3,29 @@ import projects from "./projectsInfo";
 import Image from "next/image";
 import styles from "./Projects.module.scss";
 
+const projectIcons = [
+  {
+    src: "/logos/theRemoteDoctor.jpeg",
+    alt: "The Remote Doctor",
+  },
+  {
+    src: "/logos/lokBazaar.jpeg",
+    alt: "Lok Bazaar",
+  },
+  {
+    src: "/logos/consentManager.jpeg",
+    alt: "Consent Manager",
+  },
+  {
+    src: "/logos/verify.jpeg",
+    alt: "Verify.",
+  },
+  {
+    src: "/logos/gethHired.jpeg",
+    alt: "Geth-Hired",
+  },
+];
+
 const Projects = () => {
   return (
     <div id={styles.projects}>
@@ -13,15 +36,16 @@ const Projects = () => {
         </div>
       </div>
       <div className={styles.projectList}>
-        <span className={styles.card}>
-          {/* <Image
-            alt="Picture of the author"
-            width={100}
-            height={150}
+        {projectIcons.map((project, ind) => (
+          <Image
+            key={ind}
+            alt={project.alt}
+            width={270}
+            height={230}
             className={styles.card}
-            src="https://images.unsplash.com/photo-1579227114347-15d08fc37cae?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
-          /> */}
-        </span>
+            src={project.src}
+          />
+        ))}
       </div>
     </div>
   );
