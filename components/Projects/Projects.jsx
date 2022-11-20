@@ -1,30 +1,21 @@
 import DashedHeading from "../../atoms/DashedHeading/DashedHeading";
 import projects from "./projectsInfo";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Projects.module.scss";
 
-const projectIcons = [
-  {
-    src: "/logos/theRemoteDoctor.jpeg",
-    alt: "The Remote Doctor",
-  },
-  {
-    src: "/logos/lokBazaar.jpeg",
-    alt: "Lok Bazaar",
-  },
-  {
-    src: "/logos/consentManager.jpeg",
-    alt: "Consent Manager",
-  },
-  {
-    src: "/logos/verify.jpeg",
-    alt: "Verify.",
-  },
-  {
-    src: "/logos/gethHired.jpeg",
-    alt: "Geth-Hired",
-  },
-];
+const Card = ({ icon, name, description, github }) => {
+  return (
+    <div className={styles.card}>
+      <div className={styles.projectHeader}>
+        <Image src={icon} height="30" width="30" />
+        <span className={styles.projectName}>{name}</span>
+      </div>
+      <div>{description}</div>
+      <Link href={github}>Github</Link>
+    </div>
+  );
+};
 
 const Projects = () => {
   return (
@@ -36,14 +27,13 @@ const Projects = () => {
         </div>
       </div>
       <div className={styles.projectList}>
-        {projectIcons.map((project, ind) => (
-          <Image
+        {projects.map((project, ind) => (
+          <Card
+            icon={project.icon}
+            name={project.name}
+            description={project.description}
+            github={project.github}
             key={ind}
-            alt={project.alt}
-            width={270}
-            height={230}
-            className={styles.card}
-            src={project.src}
           />
         ))}
       </div>
