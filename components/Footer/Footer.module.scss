@@ -1,0 +1,23 @@
+#footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fbfbfb;
+  padding: 2rem;
+
+  .icons {
+    display: flex;
+    column-gap: 2rem;
+  }
+
+  .tagline {
+    text-align: center;
+    font-size: 1.4rem;
+    padding-bottom: 2rem;
+  }
+
+  .tagline2 {
+    font-size: 1.2rem;
+    padding-top: 2rem;
+  }
+}

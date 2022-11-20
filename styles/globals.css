@@ -7,8 +7,9 @@ body {
   scroll-behavior: smooth;
 }
 
-body::-webkit-scrollbar {
-  display: none;
+::-webkit-scrollbar {
+  /* width: 0.5rem; */
+  /* display: none; */
 }
 
 a {
@@ -30,14 +31,4 @@ a {
 
 .mantine-1gsh4oo {
   margin-top: 0;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }

@@ -1,0 +1,32 @@
+#contact {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  align-items: center;
+  justify-content: center;
+
+  .header {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 3rem;
+    color: #7e74f1;
+  }
+
+  .inputWrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    row-gap: 2rem;
+    max-width: fit-content;
+  }
+
+  .row1 {
+    display: flex;
+    column-gap: 3rem;
+  }
+
+  .buttonColor {
+    background-color: #7e74f1;
+  }
+}

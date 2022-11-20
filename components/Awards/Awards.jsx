@@ -1,7 +1,7 @@
 import AliceCarousel from "react-alice-carousel";
 import DashedHeading from "../../atoms/DashedHeading/DashedHeading";
-import "react-alice-carousel/lib/alice-carousel.css";
 import styles from "./Awards.module.scss";
+import "react-alice-carousel/lib/alice-carousel.css";
 
 let items = [];
 const breakpoint = {
@@ -36,6 +36,7 @@ export const Awards = () => {
         autoPlay
         infinite
         autoHeight
+        animationDuration={5000}
         autoWidth
         keyboardNavigation
         paddingLeft="7rem"
