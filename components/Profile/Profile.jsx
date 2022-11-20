@@ -29,19 +29,14 @@ const Profile = () => {
           <IconBrandMedium size="2rem" />
         </span>
       </div>
-      <div className={styles.image}>
-        <div className={styles.front}>
-          <span className={styles.lines} />
-          <Image
-            className={styles.pic}
-            quality={100}
-            src="/images/me.png"
-            alt="Picture of the author"
-            width={100}
-            height={150}
-          />
-        </div>
-      </div>
+      <Image
+        className={styles.pic}
+        quality={100}
+        src="/images/me2.png"
+        alt="Picture of the author"
+        width={650}
+        height={450}
+      />
     </div>
   );
 };

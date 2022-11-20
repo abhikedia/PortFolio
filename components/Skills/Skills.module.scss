@@ -5,10 +5,9 @@
   padding: 5rem 0;
 
   .techIcons {
-    display: grid;
-    gap: 5rem 10rem;
-    padding-top: 5rem;
-    grid-template-columns: auto auto auto auto;
+    display: flex;
+    column-gap:5rem;
+    padding-top: 4rem;
   }
 
   .padding {
