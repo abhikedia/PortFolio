@@ -15,11 +15,11 @@ export default function Home() {
       <Profile />
       <Services />
       <Projects />
-      <Skills />
       <WorkExperience />
-      <Awards />
-      <Contact />
-      <Footer />
+      {/* <Awards /> */}
+      {/* <Skills /> */}
+      {/* <Contact /> */}
+      {/* <Footer /> */}
     </main>
   );
 }

@@ -1,9 +1,9 @@
-#workExperience {
+.workExperience {
   display: flex;
   padding: 5rem 0;
   padding-left: 10rem;
   justify-content: center;
-  // background-color: #fbfbfb;
+  background-color: #fbfbfb;
 
   .leftPane {
     display: flex;
@@ -51,8 +51,7 @@
   .role {
     font-family: "Plus Jakarta Sans";
     font-style: normal;
-    font-weight: 500;
-    font-size: 1.7rem;
+    font-size: 2rem;
     line-height: 23px;
     color: #232e35;
   }
@@ -62,14 +61,14 @@
     font-size: 1rem;
     line-height: 17px;
     color: #656d72;
-    padding-top: 0.5rem;
+    padding-top: 0.7rem;
   }
 
   .period {
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 24px;
-    padding-top: 0.3rem;
+    padding-top: 0.5rem;
     color: #656d72;
   }
 
@@ -77,8 +76,10 @@
     display: flex;
     column-gap: 0.5rem;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 1rem;
+    flex-wrap: wrap;
     line-height: 15px;
+    row-gap: 0.5rem;
     color: #656d72;
     padding: 1rem 0;
   }
@@ -94,9 +95,80 @@
     flex-direction: column;
     row-gap: 1rem;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.1rem;
     line-height: 19px;
     color: #656d72;
     padding-top: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  .workExperience {
+    padding: 4rem;
+
+    .leftPane {
+      row-gap: 3rem;
+    }
+
+    .displayContent {
+      padding-left: 5rem;
+      padding-top: 5rem;
+    }
+  }
+
+  #job {
+    max-width: 100%;
+
+    .points {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .workExperience {
+    padding: 4rem 3rem;
+    flex-direction: column;
+
+    .leftPane {
+      row-gap: 2rem;
+      align-items: center;
+    }
+
+    .companyList {
+      width: 100%;
+      flex-direction: row;
+    }
+
+    .displayContent {
+      display: flex;
+      width: 100%;
+      padding-left: 0rem;
+      padding-top: 2rem;
+    }
+
+    .companyName {
+      padding: 10px;
+    }
+  }
+
+  #job {
+    max-width: 100%;
+
+    .role {
+      font-size: 1.5rem;
+    }
+
+    .points {
+      font-size: 1rem;
+    }
+
+    .period {
+      font-size: 0.9rem;
+    }
+
+    .tech {
+      font-size: 0.9rem;
+    }
   }
 }

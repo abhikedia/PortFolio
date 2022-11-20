@@ -11,7 +11,7 @@ const Card = ({ icon, name, description, github }) => {
         <Image src={icon} height="30" width="30" />
         <span className={styles.projectName}>{name}</span>
       </div>
-      <div>{description}</div>
+      <div className={styles.description}>{description}</div>
       <Link href={github} className={styles.link}>
         Github
       </Link>

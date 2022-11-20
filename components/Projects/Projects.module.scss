@@ -47,4 +47,38 @@
     color: #7e74f1;
     padding-top: 1rem;
   }
+
+  .description {
+    white-space: pre-line;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  #projects {
+    padding: 4rem 2rem;
+
+    .projectList {
+      padding-top: 2rem;
+      gap: 2rem;
+    }
+
+    .card {
+      max-width: 330px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #projects {
+    padding: 4rem 2rem;
+
+    .projectList {
+      padding-top: 2rem;
+      gap: 1.5rem;
+    }
+
+    .card {
+      width: 100%;
+    }
+  }
 }

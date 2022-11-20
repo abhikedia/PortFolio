@@ -5,10 +5,30 @@ import {
   IconBrandMedium,
 } from "@tabler/icons";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import Typewriter from 'typewriter-effect/dist/core';
 import DashedHeading from "../../atoms/DashedHeading/DashedHeading";
 import styles from "./Profile.module.scss";
 
+const getWidth = () => {
+  if (window.innerWidth <= 1000 && window.innerWidth >= 768) return 350;
+  return 500;
+};
+
+const getHeight = () => {
+  if (window.innerWidth <= 1000 && window.innerWidth >= 768) return 280;
+  return 400;
+};
+
 const Profile = () => {
+  const [height, setHeight] = useState(0);
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    setHeight(getHeight());
+    setWidth(getWidth());
+  }, []);
+
   return (
     <div id={styles.profile}>
       <div className={styles.info}>
@@ -34,8 +54,8 @@ const Profile = () => {
         quality={100}
         src="/images/me2.png"
         alt="Picture of the author"
-        width={500}
-        height={400}
+        width={width}
+        height={height}
       />
     </div>
   );

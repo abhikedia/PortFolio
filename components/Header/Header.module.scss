@@ -4,14 +4,49 @@
   align-items: center;
   padding: 1.5rem 4rem;
   padding-top: 0.5rem;
+  cursor: pointer;
 
   .cta {
     display: flex;
     align-items: center;
+    font-size: 1.3rem;
   }
 
   .options {
     display: flex;
     column-gap: 2rem;
+    font-size: 1.3rem;
+  }
+
+  .menu {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  #header {
+    padding: 1.5rem 2rem;
+
+    .menu {
+      display: block;
+    }
+
+    .options {
+      display: none;
+    }
+
+    .cta {
+      display: flex;
+      align-items: center;
+      font-size: 1.3rem;
+      column-gap: 1rem;
+    }
+  }
+
+  .drawerOptions {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    font-size: 1.2rem;
   }
 }

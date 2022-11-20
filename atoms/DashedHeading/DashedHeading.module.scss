@@ -3,6 +3,8 @@
   align-items: center;
 
   .dash {
+    width: 20px;
+    height: 4px;
     background: #d9d9d9;
   }
 
@@ -12,5 +14,13 @@
     letter-spacing: 8px;
     color: #656d72;
     padding-left: 1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  #header {
+    .headText {
+      font-size: 1.1rem;
+    }
   }
 }

@@ -1,7 +1,6 @@
 #profile {
   display: flex;
-  column-gap: 20vw;
-  justify-content: center;
+  justify-content: space-around;
   padding: 5rem 0;
 
   .info {
@@ -33,34 +32,48 @@
       column-gap: 1.5rem;
     }
   }
+}
 
-  .image {
-    .front {
-      width: 336px;
-      height: 400px;
-      background: #eae6fe;
-      border-radius: 16px;
+@media (min-width: 768px) and (max-width: 1000px) {
+  #profile {
+    padding: 1rem;
+    padding-bottom: 4rem;
+
+    .info {
+      row-gap: 1rem;
+
+      .name {
+        font-size: 40px;
+      }
+
+      .description {
+        font-size: 1.1rem;
+        max-width: 85%;
+      }
     }
+  }
+}
 
-    .back {
-      background: #7e74f1;
-      border-radius: 16px;
-      transform: rotate(-9.55deg);
-    }
+@media (max-width: 767px) {
+  #profile {
+    padding: 1rem 2rem;
+    padding-bottom: 4rem;
 
-    .lines {
-      opacity: 0.7;
-      /* White */
-      height: 343.16632080078125px;
-      width: 398.25238037109375px;
-      left: 8px;
-      //   top: -134.415771484375px;
-      border-radius: 0px;
-      border: 2px dashed #ffffff;
+    .info {
+      row-gap: 1rem;
+
+      .name {
+        font-size: 38px;
+      }
+
+      .description {
+        font-size: 1rem;
+        max-width: 90%;
+      }
     }
 
     .pic {
-      border-radius: 4px;
+      display: none;
     }
   }
 }
