@@ -1,7 +1,7 @@
-#services {
+.services {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
   padding: 7rem 5rem;
   background-color: #fbfbfb;
 
@@ -13,7 +13,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1000px) {
-  #services {
+  .services {
     padding: 4rem 2rem;
 
     .cards {
@@ -24,7 +24,7 @@
 }
 
 @media (max-width: 767px) {
-  #services {
+  .services {
     padding: 4rem 2rem;
 
     .cards {

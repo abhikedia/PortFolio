@@ -26,7 +26,7 @@ const Footer = () => {
         <IconBrandMedium size="3rem" />
       </span>
       <span className={styles.tagline2}>
-        Made with &#x2764; by Abhishek Kedia
+        Built with &#x2764; by Abhishek Kedia
       </span>
     </div>
   );

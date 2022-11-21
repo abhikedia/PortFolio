@@ -5,8 +5,9 @@ import {
   IconBrandMedium,
 } from "@tabler/icons";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
-import Typewriter from 'typewriter-effect/dist/core';
+import Typewriter from "typewriter-effect/dist/core";
 import DashedHeading from "../../atoms/DashedHeading/DashedHeading";
 import styles from "./Profile.module.scss";
 
@@ -30,7 +31,7 @@ const Profile = () => {
   }, []);
 
   return (
-    <div id={styles.profile}>
+    <div className={styles.profile} id="profile">
       <div className={styles.info}>
         <DashedHeading text="MY NAME IS" />
         <span className={styles.name}>
@@ -38,15 +39,23 @@ const Profile = () => {
           <span className={styles.lastName}>Kedia.</span>
         </span>
         <span className={styles.description}>
-          Creative front-end developer with more than +5 years of experience in
-          enterprise companies and startups. Proficient in JavaScript, Angular,
-          and React. Passionate about UI/UX
+          Creative full-stack developer with more than 2+ years of experience in
+          enterprise companies and startups. Proficient in JavaScript, React and
+          Nodejs.
         </span>
         <span className={styles.icons}>
-          <IconBrandLinkedin size="2rem" />
-          <IconBrandGithub size="2rem" />
-          <IconBrandStackoverflow size="2rem" />
-          <IconBrandMedium size="2rem" />
+          <Link href="https://www.linkedin.com/in/abhikedia/">
+            <IconBrandLinkedin size="2rem" />
+          </Link>
+          <Link href="https://github.com/abhikedia">
+            <IconBrandGithub size="2rem" />
+          </Link>
+          <Link href="https://stackoverflow.com/users/11052982/abhikedia">
+            <IconBrandStackoverflow size="2rem" />
+          </Link>
+          <Link href="https://medium.com/@iamabhikedia74">
+            <IconBrandMedium size="2rem" />
+          </Link>
         </span>
       </div>
       <Image

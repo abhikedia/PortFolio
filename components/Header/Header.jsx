@@ -1,4 +1,4 @@
-import ColorSchemeToggle from "../ColorSchemeToggle/colorSchemeToggle";
+// import ColorSchemeToggle from "../ColorSchemeToggle/colorSchemeToggle";
 import { Button, Drawer } from "@mantine/core";
 import styles from "./Header.module.scss";
 import Image from "next/image";
@@ -14,11 +14,11 @@ const Header = () => {
       <Image src="./responsive.gif" unoptimized={true} height={80} width={80} />
       <div className={styles.options}>
         <Link href="#services">Services</Link>
-        <span>Portfolio</span>
+        <Link href="#portfolio">Portfolio</Link>
         <Link href="#workExperience">Experience</Link>
-        <span>Recognitions</span>
-        <span>Skills</span>
-        <span>Contact</span>
+        <Link href="#awards">Recognitions</Link>
+        <Link href="#skills">Skills</Link>
+        <Link href="#contact">Contact</Link>
       </div>
       <div className={`${styles.cta}`}>
         {/* <ColorSchemeToggle /> */}
@@ -35,11 +35,11 @@ const Header = () => {
       >
         <div className={styles.drawerOptions}>
           <Link href="#services">Services</Link>
-          <span>Portfolio</span>
+          <Link href="#portfolio">Portfolio</Link>
           <Link href="#workExperience">Experience</Link>
-          <span>Recognitions</span>
-          <span>Skills</span>
-          <span>Contact</span>
+          <Link href="#awards">Recognitions</Link>
+          <Link href="#skills">Skills</Link>
+          <Link href="#contact">Contact</Link>
         </div>
       </Drawer>
     </div>
