@@ -32,7 +32,7 @@ const WorkExperience = () => {
   const [company, selectedCompany] = useState("cisco");
 
   return (
-    <div className={styles.workExperience} id="workExperience">
+    <div className={styles.workExperience} id="experience">
       <div className={styles.leftPane}>
         <div className="header">
           <DashedHeading text="CAREER PATH" />

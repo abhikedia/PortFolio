@@ -2,8 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 4rem;
+  padding: 0rem 4rem;
+  padding-top: 1rem;
+  position: fixed;
   padding-top: 0.5rem;
+  width: 100%;
+  z-index: 200;
+  background-color: white;
   cursor: pointer;
 
   .cta {
@@ -25,7 +30,7 @@
 
 @media (max-width: 1000px) {
   #header {
-    padding: 1.5rem 2rem;
+    padding: 0rem 2rem;
 
     .menu {
       display: block;

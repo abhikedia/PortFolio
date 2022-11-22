@@ -1,4 +1,4 @@
-#projects {
+.projects {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,7 +54,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1000px) {
-  #projects {
+  .projects {
     padding: 4rem 2rem;
 
     .projectList {
@@ -69,7 +69,7 @@
 }
 
 @media (max-width: 767px) {
-  #projects {
+  .projects {
     padding: 4rem 2rem;
 
     .projectList {

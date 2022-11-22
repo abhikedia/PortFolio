@@ -1,34 +1,76 @@
 import { Button, Textarea, TextInput } from "@mantine/core";
-import { IconSend } from "@tabler/icons";
+import { IconCheck, IconSend } from "@tabler/icons";
 import { useState } from "react";
 import DashedHeading from "../../atoms/DashedHeading/DashedHeading";
 import styles from "./Contact.module.scss";
+
+const validateEmail = (email) => {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [text, setText] = useState("Send Message");
 
   const sendMail = () => {
     setLoading(true);
-    const options = {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-        "X-RapidAPI-Key": process.env.NEXT_PUBLIC_APIKEY,
-        "X-RapidAPI-Host": "rapidprod-sendgrid-v1.p.rapidapi.com",
+
+    var myHeaders = new Headers();
+    myHeaders.append("X-RapidAPI-Host", "rapidprod-sendgrid-v1.p.rapidapi.com");
+    myHeaders.append("X-RapidAPI-Key", process.env.NEXT_PUBLIC_APIKEY);
+    myHeaders.append("content-type", "application/json");
+    myHeaders.append("access-Control-Allow-Origin", "*");
+
+    var raw = JSON.stringify({
+      personalizations: [
+        {
+          to: [
+            {
+              email: process.env.NEXT_PUBLIC_EMAIL,
+            },
+          ],
+          subject: `Portfolio reachout by ${name}`,
+        },
+      ],
+      from: {
+        email: email,
       },
-      data: `{"personalizations":[{"to":[{"email":${email}}],"subject":"Portfolio reachout}],"from":{"email":${email}},"content":[{"type":"text/plain","value":${message}}]}`,
+      content: [
+        {
+          type: "text/plain",
+          value: message,
+        },
+      ],
+    });
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
     };
 
-    fetch("https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send", options)
-      .catch((e) => console.log(e))
-      .finally(() => setLoading(false));
+    fetch(
+      "https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send",
+      requestOptions
+    )
+      .then(() => {})
+      .catch(() => {})
+      .finally(() => {
+        setText("Sent");
+        setLoading(false);
+      });
   };
 
   return (
-    <div id={styles.contact}>
+    <div id="contact" className={styles.contact}>
       <div className="header">
         <DashedHeading text="LET'S CONNECT" />
         <span className="header-text">Contact Me</span>
@@ -66,12 +108,14 @@ const Contact = () => {
         radius="md"
         size="md"
         loading={loading}
-        leftIcon={<IconSend size={16} />}
+        leftIcon={
+          text === "Sent" ? <IconCheck size={16} /> : <IconSend size={16} />
+        }
         onClick={sendMail}
         className={styles.buttonColor}
-        disabled={!name.length || !email.length || !message.length}
+        disabled={!name.length || !validateEmail(email) || !message.length}
       >
-        Send Message
+        {text}
       </Button>
     </div>
   );

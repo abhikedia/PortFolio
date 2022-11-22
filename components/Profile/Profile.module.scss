@@ -1,7 +1,7 @@
 .profile {
   display: flex;
   justify-content: space-around;
-  padding: 5rem 0;
+  padding: 10rem 0;
 
   .info {
     display: flex;
@@ -39,6 +39,7 @@
   .profile {
     padding: 1rem;
     padding-bottom: 4rem;
+    padding-top: 8rem;
 
     .info {
       row-gap: 1rem;
@@ -59,6 +60,7 @@
   .profile {
     padding: 1rem 2rem;
     padding-bottom: 4rem;
+    padding-top: 8rem;
 
     .info {
       row-gap: 1rem;

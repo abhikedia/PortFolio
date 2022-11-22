@@ -7,7 +7,6 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Typewriter from "typewriter-effect/dist/core";
 import DashedHeading from "../../atoms/DashedHeading/DashedHeading";
 import styles from "./Profile.module.scss";
 

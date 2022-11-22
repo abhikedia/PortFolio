@@ -15,15 +15,16 @@ const Footer = () => {
         unoptimized={true}
         height={150}
         width={150}
+        alt="animated-gif"
       />
       <span className={styles.tagline}>
         Living, learning & leveling up one day at a time.
       </span>
       <span className={styles.icons}>
-        <IconBrandLinkedin size="3rem" />
-        <IconBrandGithub size="3rem" />
-        <IconBrandStackoverflow size="3rem" />
-        <IconBrandMedium size="3rem" />
+        <IconBrandLinkedin size="2.5rem" />
+        <IconBrandGithub size="2.5rem" />
+        <IconBrandStackoverflow size="2.5rem" />
+        <IconBrandMedium size="2.5rem" />
       </span>
       <span className={styles.tagline2}>
         Built with &#x2764; by Abhishek Kedia

@@ -8,7 +8,7 @@ const Card = ({ icon, name, description, github }) => {
   return (
     <div className={styles.card}>
       <div className={styles.projectHeader}>
-        <Image src={icon} height="30" width="30" />
+        <Image src={icon} height="30" width="30" alt={`Icon for ${name}`} />
         <span className={styles.projectName}>{name}</span>
       </div>
       <div className={styles.description}>{description}</div>
@@ -21,7 +21,7 @@ const Card = ({ icon, name, description, github }) => {
 
 const Projects = () => {
   return (
-    <div id={styles.projects}>
+    <div id="portfolio" className={styles.projects}>
       <div className={styles.row1}>
         <div className="header">
           <DashedHeading text="MY WORKS" />

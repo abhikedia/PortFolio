@@ -21,3 +21,15 @@
     padding-top: 2rem;
   }
 }
+
+@media (max-width: 767px) {
+  #footer {
+    .tagline {
+      font-size: 1.1rem;
+    }
+
+    .tagline2 {
+      font-size: 1rem;
+    }
+  }
+}

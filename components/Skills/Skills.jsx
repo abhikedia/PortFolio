@@ -19,7 +19,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <div id={styles.skills}>
+    <div id="skills" className={styles.skills}>
       <div className="header">
         <DashedHeading text="Tech Involvement" />
         <span className="header-text">My Skillset</span>

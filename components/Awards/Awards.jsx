@@ -25,7 +25,7 @@ for (let i = 1; i < 10; i++)
 
 export const Awards = () => {
   return (
-    <div id={styles.awards}>
+    <div id="recognitions" className={styles.awards}>
       <div className={`header ${styles.heading}`}>
         <DashedHeading text="PLACES I STOOD OUT" />
         <span className="header-text">Awards & Recognitions</span>
@@ -33,10 +33,10 @@ export const Awards = () => {
       <AliceCarousel
         mouseTracking
         items={items}
-        autoPlay
+        // autoPlay
         infinite
         autoHeight
-        animationDuration={5000}
+        animationDuration={1000}
         autoWidth
         keyboardNavigation
         responsive={breakpoint}
