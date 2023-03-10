@@ -16,11 +16,39 @@ const elements = [
   "Contact",
 ];
 
+
+const handlehover = (e) => {
+  if (e.target.classList.contains("nav__link")) {
+    const link = e.target;
+    const siblings = link.closest(".nav").querySelectorAll(".nav__link");
+
+
+    siblings.forEach((el) => {
+      if (el !== link) el.style.opacity = 0.5;
+    });
+  
+  }
+};
+
+const handleout = (e) => {
+  if (e.target.classList.contains("nav__link")) {
+    // alert("dd")
+    const link = e.target;
+    const siblings = link.closest(".nav").querySelectorAll(".nav__link");
+
+
+    siblings.forEach((el) => {
+      if (el !== link) el.style.opacity = 1;
+    });
+   
+  }
+};
+
 const Header = () => {
   const [opened, setOpened] = useState(false);
 
   return (
-    <div id={styles.header}>
+    <div id={styles.header} >
       <Image
         src="./responsive.gif"
         unoptimized={true}
@@ -28,9 +56,10 @@ const Header = () => {
         width={80}
         alt="animated-gif"
       />
-      <div className={styles.options}>
+      <div className={`${styles.options} nav`} >
         {elements.map((el) => (
-          <Link href={`#${el.toLowerCase()}`} scroll={false} key={el}>
+          <Link className="nav__link" href={`#${el.toLowerCase()}`} onMouseOver={handlehover}
+          onMouseOut={handleout} scroll={false} key={el}>
             {el}
           </Link>
         ))}
