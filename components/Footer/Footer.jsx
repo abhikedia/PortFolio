@@ -21,10 +21,18 @@ const Footer = () => {
         Living, learning & leveling up one day at a time.
       </span>
       <span className={styles.icons}>
-        <IconBrandLinkedin size="2.5rem" />
-        <IconBrandGithub size="2.5rem" />
-        <IconBrandStackoverflow size="2.5rem" />
-        <IconBrandMedium size="2.5rem" />
+      <Link href="https://www.linkedin.com/in/abhikedia/">
+            <IconBrandLinkedin size="2.5rem" />
+          </Link>
+          <Link href="https://github.com/abhikedia">
+            <IconBrandGithub size="2.5rem" />
+          </Link>
+          <Link href="https://stackoverflow.com/users/11052982/abhikedia">
+            <IconBrandStackoverflow size="2.5rem" />
+          </Link>
+          <Link href="https://medium.com/@iamabhikedia74">
+            <IconBrandMedium size="2.5rem" />
+          </Link>
       </span>
       <span className={styles.tagline2}>
         Built with &#x2764; by Abhishek Kedia
