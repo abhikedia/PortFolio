@@ -5,6 +5,7 @@ import {
   IconBrandStackoverflow,
   IconBrandMedium,
 } from "@tabler/icons";
+import Link from "next/link";
 import styles from "./Footer.module.scss";
 
 const Footer = () => {
