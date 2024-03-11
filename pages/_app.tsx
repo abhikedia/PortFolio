@@ -1,7 +1,9 @@
 import NextApp, { AppProps, AppContext } from "next/app";
 import Head from "next/head";
 import { MantineProvider } from "@mantine/core";
+import { Analytics } from "@vercel/analytics/react";
 import "../styles/globals.css";
+
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
 
@@ -23,6 +25,7 @@ export default function App(props: AppProps) {
       </Head>
 
       <MantineProvider withGlobalStyles withNormalizeCSS>
+        <Analytics />
         <Component {...pageProps} />
       </MantineProvider>
     </>

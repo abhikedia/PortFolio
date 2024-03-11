@@ -37,12 +37,12 @@ const Header = () => {
       </div>
       <div className={`${styles.cta}`}>
         {/* <ColorSchemeToggle /> */}
-        <Button
+        {/* <Button
           variant="default"
           onClick={() => window.open("/Resume_Abhishek_Kedia.pdf", "_blank")}
         >
           Resume
-        </Button>
+        </Button> */}
         <IconMenu2 className={styles.menu} onClick={() => setOpened(true)} />
       </div>
       <Drawer

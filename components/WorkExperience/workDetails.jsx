@@ -15,16 +15,17 @@ const details = {
     iit: "May 2019-July 2019",
   },
   tech: {
-    cisco: ["React.js", "Node.js", "Jenkins"],
+    cisco: ["React.js", "Nextjs", "Node.js", "Nx Monorepo", "Module Federation"],
     devfolio: ["Ethereum", "Matic", "React.js", "MySQL", "Node.js"],
     iit: ["Ethereum", "Swarm", "React.js", "MySQL", "Node.js"],
   },
   points: {
     cisco: [
-      "Interned with Cisco in January and was later offered a full-time position.",
-      "Worked on Instant Connect, which is a web-based meeting tool that enables WebRTC-based virtual consultations between a doctor and patient.",
-      "Built a webex bot facilitating meeting links generation for Instant Connect.",
-      "Voluntarily contributed in improving internal tools by adding more features.",
+      "Built and integrated multiple Micro-Frontends in React and Nextjs using ModuleFederation, resulting in performance improvements.",
+      "Contributed to the creation of MagneticX, a React monorepo based component library widely employed within Cisco’s Security business group.",
+      "Contributed in the development of ”Instant Connect”, a WebRTC-powered web application facilitating seamless video conferences between doctors and patients.",
+      "Gained valuable experience in software development and project management, including agile methodologies and cross-functional teamwork.",
+      "Solely designed and implemented a Node.js bot for Webex, streamlining the generation of meeting links and sending invites for Instant Connect.",
     ],
     devfolio: [
       "Worked with Matic and Ethereum mentors to investigate different facets of the Ethereum blockchain.",

@@ -39,6 +39,12 @@ const Skills = () => {
           className={styles.padding}
         />
         <Image
+          src="/icons/golang.png"
+          width={height}
+          height={height}
+          alt="tech-icon"
+        />
+        <Image
           src="/icons/node.png"
           width={height}
           height={height}

@@ -2,6 +2,7 @@ import { Button, Textarea, TextInput } from "@mantine/core";
 import { IconCheck, IconSend } from "@tabler/icons";
 import { useState } from "react";
 import DashedHeading from "../../atoms/DashedHeading/DashedHeading";
+import emailjs from "@emailjs/browser";
 import styles from "./Contact.module.scss";
 
 const validateEmail = (email) => {
@@ -22,51 +23,26 @@ const Contact = () => {
   const sendMail = () => {
     setLoading(true);
 
-    var myHeaders = new Headers();
-    myHeaders.append("X-RapidAPI-Host", "rapidprod-sendgrid-v1.p.rapidapi.com");
-    myHeaders.append("X-RapidAPI-Key", process.env.NEXT_PUBLIC_APIKEY);
-    myHeaders.append("content-type", "application/json");
-    myHeaders.append("access-Control-Allow-Origin", "*");
-
-    var raw = JSON.stringify({
-      personalizations: [
+    emailjs
+      .send(
+        "service_1svqnfr",
+        "template_q3j84bn",
         {
-          to: [
-            {
-              email: process.env.NEXT_PUBLIC_EMAIL,
-            },
-          ],
-          subject: `Portfolio reachout by ${name}`,
+          from_name: email,
+          message: message,
         },
-      ],
-      from: {
-        email: email,
-      },
-      content: [
         {
-          type: "text/plain",
-          value: message,
-        },
-      ],
-    });
-
-    var requestOptions = {
-      method: "POST",
-      headers: myHeaders,
-      body: raw,
-      redirect: "follow",
-    };
-
-    fetch(
-      "https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send",
-      requestOptions
-    )
-      .then(() => {})
-      .catch(() => {})
-      .finally(() => {
+          publicKey: "jGcmCLwJj5SiSXUJO",
+        }
+      )
+      .then(() => {
         setText("Sent");
+        setEmail("");
+        setMessage("");
+        setName("");
         setLoading(false);
-      });
+      })
+      .catch((error) => {});
   };
 
   return (
@@ -86,12 +62,14 @@ const Contact = () => {
             label="Name"
             radius="md"
             size="lg"
+            value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <TextInput
             label="Email"
             radius="md"
             size="lg"
+            value={email}
             type="email"
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -99,7 +77,9 @@ const Contact = () => {
         <Textarea
           radius="md"
           label="Message"
+          placeholder="Write your message here..."
           minRows={7}
+          value={message}
           size="lg"
           onChange={(e) => setMessage(e.target.value)}
         />

@@ -38,8 +38,8 @@ const Profile = () => {
           <span className={styles.lastName}>Kedia.</span>
         </span>
         <span className={styles.description}>
-          Creative full-stack developer with more than 2+ years of experience in
-          enterprise companies and startups. Proficient in JavaScript, React and
+          Creative full-stack developer with more than 3+ years of experience in
+          enterprise companies and startups. Proficient in JavaScript, Typescript, React, Nextjs, Golang and
           Nodejs.
         </span>
         <span className={styles.icons}>

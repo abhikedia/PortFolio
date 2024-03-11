@@ -16,14 +16,14 @@ const Services = () => {
           heading="Frontend Development"
           description="I like to code things from scratch, and enjoy bringing ideas to life in the browser."
           subHeader="Tools I prefer:"
-          skills="HTML, CSS, Sass, Git, Javascript, React, Redux, Mantine, MaterialUI, SemanticUI"
+          skills="Javascript, Typescript, React, Nextjs, ModuleFederation, Redux, Mantine, MaterialUI, SemanticUI"
         />
         <ServiceCard
           Icon={IconDatabase}
           heading="Backend Development"
           description="I can build high performing and secure databases utilizing every bit of resource available."
           subHeader="Tools I prefer:"
-          skills="Nodejs, MongoDB, MySQL, Postman, AWS"
+          skills="Golang, Nodejs, MongoDB, MySQL, Postman, AWS"
         />
         <ServiceCard
           Icon={IconDatabase}
